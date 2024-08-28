@@ -1,0 +1,297 @@
+-- local colors = require("evergarden.colors").setup()
+-- -- require("bufferline").setup({
+-- -- 	highlights = {
+-- -- 		buffer_visible = {
+-- -- 			fg = colors.fg[0],
+-- -- 		},
+-- -- 	},
+-- -- })
+--
+-- require("bufferline").setup({
+-- 	highlights = {
+-- 		Normal = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		fill = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		background = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		tab = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		tab_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		tab_separator = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		tab_separator_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 		},
+-- 		tab_close = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		close_button = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		close_button_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		close_button_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		buffer_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		buffer_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		numbers = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		numbers_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		numbers_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		diagnostic = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		diagnostic_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		diagnostic_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		hint = {
+-- 			fg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		hint_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		hint_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		hint_diagnostic = {
+-- 			fg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		hint_diagnostic_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		hint_diagnostic_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		info = {
+-- 			fg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		info_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		info_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		info_diagnostic = {
+-- 			fg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		info_diagnostic_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		info_diagnostic_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		warning = {
+-- 			fg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		warning_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		warning_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		warning_diagnostic = {
+-- 			fg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		warning_diagnostic_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		warning_diagnostic_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		error = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 		},
+-- 		error_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		error_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		error_diagnostic = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 		},
+-- 		error_diagnostic_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		error_diagnostic_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			sp = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		modified = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		modified_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		modified_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		duplicate_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			italic = true,
+-- 		},
+-- 		duplicate_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			italic = true,
+-- 		},
+-- 		duplicate = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			italic = true,
+-- 		},
+-- 		separator_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		separator_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		separator = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		indicator_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		indicator_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		pick_selected = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		pick_visible = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		pick = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 			bold = true,
+-- 			italic = true,
+-- 		},
+-- 		offset_separator = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 		trunc_marker = {
+-- 			fg = "#FFFFFF",
+-- 			bg = "#FFFFFF",
+-- 		},
+-- 	},
+-- })

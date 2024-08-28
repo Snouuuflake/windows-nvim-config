@@ -1,0 +1,32 @@
+-- return {
+--   "akinsho/bufferline.nvim",
+--   version = "*",
+--   dependencies = "nvim-tree/nvim-web-devicons",
+--   config = function()
+--     local bufferline = require('bufferline')
+--     bufferline.setup {
+--       options = {
+--         mode = "buffers",                               -- set to "tabs" to only show tabpages instead
+--         style_preset = bufferline.style_preset.minimal, --bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
+--         themable = true,
+--         numbers = "buffer_id"
+--       }
+--     }
+--   end
+-- }
+-- return {
+--   "ojroques/nvim-bufbar",
+-- 	config = function()
+-- 		require("bufbar").setup({
+-- 			theme = "default", -- the theme in 'lua/bufbar/themes' to use
+-- 			show_tabs = true, -- show tabs
+-- 			show_bufname = "current", -- show full buffer name ('current', 'visible' or 'all')
+-- 			show_flags = true, -- show buffer flags
+-- 			show_alternate = false, -- show alternate buffer
+-- 			modifier = ":t", -- the name modifier
+-- 			term_modifier = ":t", -- the name modifier for terminal buffers
+-- 			separator = "|", -- the buffer separator
+-- 		})
+-- 	end,
+-- }
+return {}
