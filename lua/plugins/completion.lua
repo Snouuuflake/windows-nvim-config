@@ -13,7 +13,7 @@ return {
       --   pattern = "*",
       --   command = "LuaSnipUnlinkCurrent",
       -- })
-      vim.keymap.set("i", "<Esc>", "<Esc>:LuaSnipUnlinkCurrent<CR>", {})
+      vim.keymap.set("i", "<Esc>", "<Esc>:silent LuaSnipUnlinkCurrent<CR>", {})
     end,
   },
   {
@@ -69,13 +69,13 @@ return {
             end
           end, { "i", "s" }),
 
-          ["<C-N>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_prev_item()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
+          -- ["<C-N>"] = cmp.mapping(function(fallback)
+          --   if cmp.visible() then
+          --     cmp.select_prev_item()
+          --   else
+          --     fallback()
+          --   end
+          -- end, { "i", "s" }),
           
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if luasnip.locally_jumpable(-1) then

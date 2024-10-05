@@ -32,8 +32,6 @@ return {
 		local artsize = 21
 
 		local getLyric = function()
-			-- local lyrics = require([[C:\Users\xuehu\AppData\Local\nvim\lua\plugins\Not-Plugins\lyrics.lua]])
-
 			math.randomseed(os.time())
 			local chosenLyric = lyrics[math.random(1, #lyrics)]
 
@@ -55,13 +53,13 @@ return {
 		-- Set header
 		dashboard.section.header.opts = { hl = "@text.title1", position = "center" }
 		local header = {
-			"                   ",
-			" 🦋                ",
-			"          ╱|、     ",
-			"         (˚ˎ。7    ",
-			"         |、˜〵    ",
-			"         じしˍ,)ノ ",
-			"                   ",
+			[[ _ " _             ]],
+			[[(_\|/_)            ]],
+			[[ (/|\)    ╱|、     ]],
+			[[         (˚ˎ。7    ]],
+			[[         |、˜〵    ]],
+			[[         じしˍ,)ノ ]],
+			[[                   ]],
 		}
 
 		local resLyric = getLyric()
