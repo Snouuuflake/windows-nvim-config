@@ -32,12 +32,6 @@ setKey("n", "<leader>bn", ":bn<CR>", {})
 setKey("n", "<leader>bp", ":bp<CR>", {})
 setKey("n", "<leader>bd", ":bd<CR>", {})
 
--- telescope
-local builtin = require("telescope.builtin")
-setKey("n", "<leader>ff", builtin.find_files, {})
-setKey("n", "<leader>fg", builtin.live_grep, {})
-setKey("n", "<leader>fo", builtin.oldfiles, {})
-setKey("n", "<Leader>bf", builtin.buffers, {})
 
 -- neotree
 setKey("n", "<leader>eo", ":Neotree filesystem reveal right<CR>")

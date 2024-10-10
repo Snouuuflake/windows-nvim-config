@@ -14,7 +14,9 @@ local opts = {}
 
 vim.g.mapleader = " "
 
-require("lazy").setup("plugins")
+if not vim.g.vscode then
+  require("lazy").setup("plugins")
+end
 
 
 require("keymaps")
