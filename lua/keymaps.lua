@@ -26,7 +26,7 @@ end, { noremap = true, expr = true })
 setKey("i", "<c-h>", "<c-o>h", {})
 setKey("i", "<c-j>", "<c-o>j", {})
 setKey("i", "<c-k>", "<c-o>k", {})
-setKey("i", "<c-l>", "<c-o>l", {})
+setKey("i", "<c-l>", "<c-o>a", {})
 
 setKey("n", "<leader>bn", ":bn<CR>", {})
 setKey("n", "<leader>bp", ":bp<CR>", {})

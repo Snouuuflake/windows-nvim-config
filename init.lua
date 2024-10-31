@@ -21,3 +21,4 @@ end
 
 require("keymaps")
 require("vim-options")
+vim.cmd [[ source C:\Files on disk\Remote\MSS-REAL\mss.vim ]]
