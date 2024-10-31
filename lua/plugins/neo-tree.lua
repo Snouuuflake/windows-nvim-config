@@ -15,4 +15,10 @@ return {
 			end,
 		},
 	},
+  config = function ()
+    -- neotree
+    vim.keymap.set("n", "<leader>eo", ":Neotree filesystem reveal right<CR>")
+    vim.keymap.set("n", "<leader>ec", ":Neotree close<CR>")
+    vim.keymap.set("n", "<leader>ef", ":Neotree filesystem reveal float<CR>")
+  end
 }

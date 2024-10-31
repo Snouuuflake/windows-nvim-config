@@ -1,5 +1,5 @@
 vim.cmd("set termguicolors")
-vim.cmd.colorscheme("moonlight")
+vim.cmd.colorscheme("ismr2")
 vim.opt.fillchars = {eob = " "}
 vim.opt.number = true
 vim.opt.relativenumber = true

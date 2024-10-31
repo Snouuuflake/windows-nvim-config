@@ -1,8 +1,16 @@
 return {
   "folke/twilight.nvim",
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+  config = function()
+    Twilight = false
+    function ToggleTwilight()
+      if Twilight then
+        vim.cmd("TwilightDisable")
+        Twilight = false
+      else
+        vim.cmd("TwilightEnable")
+        Twilight = true
+      end
+    end
+    vim.keymap.set("n", "<Leader>tt", ToggleTwilight, { noremap = true })
+  end
 }
