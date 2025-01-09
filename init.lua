@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
+vim.cmd [[set termguicolors]]
+
 vim.g.mapleader = " "
 
 if not vim.g.vscode then

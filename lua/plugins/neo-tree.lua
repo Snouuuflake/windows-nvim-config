@@ -7,18 +7,22 @@ return {
 		"MunifTanjim/nui.nvim",
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
-	opts = {
-		event_handlers = {
-			event = "neo_tree_buffer_enter",
-			handler = function()
-				vim.opt_local.relativenumber = true
-			end,
-		},
-	},
-  config = function ()
-    -- neotree
-    vim.keymap.set("n", "<leader>eo", ":Neotree filesystem reveal right<CR>")
-    vim.keymap.set("n", "<leader>ec", ":Neotree close<CR>")
-    vim.keymap.set("n", "<leader>ef", ":Neotree filesystem reveal float<CR>")
-  end
+	config = function()
+		-- neotree
+		vim.keymap.set("n", "<leader>eo", ":Neotree filesystem reveal right<CR>")
+		vim.keymap.set("n", "<leader>ec", ":Neotree close<CR>")
+		vim.keymap.set("n", "<leader>ef", ":Neotree filesystem reveal float<CR>")
+
+		require("neo-tree").setup({
+			event_handlers = {
+				{
+					event = "neo_tree_buffer_enter",
+					handler = function()
+						vim.opt_local.relativenumber = true
+					end,
+				},
+			},
+		})
+
+	end,
 }

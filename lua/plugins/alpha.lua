@@ -51,7 +51,6 @@ return {
 		local dashboard = require("alpha.themes.dashboard")
 
 		-- Set header
-		dashboard.section.header.opts = { hl = "@text.title1", position = "center" }
 		local header = {
 			[[ _ " _             ]],
 			[[(_\|/_)            ]],
@@ -71,18 +70,32 @@ return {
 			artsize = artsize + 2
 		end
 
+		local hiLeft = math.floor((artsize - 21) / 2)
+		dashboard.section.header.opts = { hl = { 
+      { { "Blue", hiLeft, hiLeft + 3 }, {"Purple", hiLeft+3, hiLeft+4}, {"Blue", hiLeft+4, hiLeft+7} },
+      { { "Blue", hiLeft, hiLeft + 3 }, {"Purple", hiLeft+3, hiLeft+4}, {"Blue", hiLeft+4, hiLeft+7} },
+      { { "Blue", hiLeft, hiLeft + 3 }, {"Purple", hiLeft+3, hiLeft+4}, {"Blue", hiLeft+4, hiLeft+7} },
+    }, position = "center" }
+
 		for _, v in ipairs(resLyric) do
 			table.insert(header, v)
 		end
 		dashboard.section.header.val = header
 
 		-- Set menu
+    dashboard.section.buttons.opts.hl_shortcut = "Blue"
+    dashboard.section.buttons.opts.align_shortcut = "left"
+
 		dashboard.section.buttons.val = {
 			dashboard.button("e", "  New file", ":enew <BAR> startinsert <CR>"),
 			dashboard.button("SPC f f", "󰈞  Find file"),
 			dashboard.button("SPC f o", "󰊄  Recently opened files"),
 			dashboard.button("SPC f g", "󰈬  Find word"),
 		}
+    for _, x in pairs(dashboard.section.buttons.val) do
+      x.opts.hl_shortcut = "Green"
+    end
+
 		alpha.setup(dashboard.opts)
 	end,
 }

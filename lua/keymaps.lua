@@ -6,6 +6,8 @@
 local setKey = vim.keymap.set
 
 setKey("n", "<leader>w", ":w<CR>", {})
+setKey("n", "<leader>x", ":x<CR>", {})
+setKey("n", "<leader>q", ":q<CR>", {})
 setKey("n", "<leader>h", ":noh<CR>", {})
 setKey("n", "Q", "<c-v>", {})
 setKey({ "n", "x" }, "j", function()
