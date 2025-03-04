@@ -6,19 +6,20 @@ return {
 		config = function()
 			require("telescope").setup({
 				defaults = {
-					layout_strategy = "vertical",
-					layout_config = { height = 0.67 },
+					layout_config = {
+						horizontal = {
+							preview_cutoff = 0,
+						},
+					},
 				},
-				pickers = {},
 			})
-
-			local setKey = vim.keymap.set
+			local nmap = require("lib").MakeLocalMapper("m", "f", { noremap = true })
 			-- telescope
 			local builtin = require("telescope.builtin")
-			setKey("n", "<leader>ff", builtin.find_files, {})
-			setKey("n", "<leader>fg", builtin.live_grep, {})
-			setKey("n", "<leader>fo", builtin.oldfiles, {})
-			setKey("n", "<Leader>bf", builtin.buffers, {})
+			nmap("f", builtin.find_files)
+			nmap("g", builtin.live_grep)
+			nmap("o", builtin.oldfiles)
+			nmap("b", builtin.buffers)
 		end,
 	},
 	{
@@ -30,20 +31,6 @@ return {
 						require("telescope.themes").get_dropdown({
 							-- even more opts
 						}),
-
-						-- pseudo code / specification for writing custom displays, like the one
-						-- for "codeactions"
-						-- specific_opts = {
-						--   [kind] = {
-						--     make_indexed = function(items) -> indexed_items, width,
-						--     make_displayer = function(widths) -> displayer
-						--     make_display = function(displayer) -> function(e)
-						--     make_ordinal = function(e) -> string
-						--   },
-						--   -- for example to disable the custom builtin "codeactions" display
-						--      do the following
-						--   codeactions = false,
-						-- }
 					},
 				},
 			})

@@ -25,15 +25,16 @@ setKey({ "n", "x" }, "k", function()
   end
 end, { noremap = true, expr = true })
 
-setKey("i", "<c-h>", "<c-o>h", {})
-setKey("i", "<c-j>", "<c-o>j", {})
-setKey("i", "<c-k>", "<c-o>k", {})
-setKey("i", "<c-l>", "<c-o>a", {})
-
 setKey("n", "<leader>bn", ":bn<CR>", {})
 setKey("n", "<leader>bp", ":bp<CR>", {})
 setKey("n", "<leader>bd", ":bd<CR>", {})
 
+setKey("n", "<leader>rp", function()
+  vim.cmd [[ lua require'toggleterm'.exec("py '" .. vim.fn.expand("%") .. "'", 2) ]]
+end, { noremap =  true })
+setKey("n", "<leader>rip", function()
+  vim.cmd [[ lua require'toggleterm'.exec("py -i '" .. vim.fn.expand("%") .. "'", 2) ]]
+end, { noremap =  true })
 
 -- vim, lspconfig
 setKey("n", "K", vim.lsp.buf.hover, {})
@@ -57,3 +58,6 @@ end
 
 setKey("n", "<Leader>mx", MD_toggleCheckbox, { noremap = true })
 
+-- terminals
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+vim.keymap.set("t", "jk", [[<C-\><C-n>]])

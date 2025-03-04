@@ -2,8 +2,8 @@ return {
   "nvim-lualine/lualine.nvim",
   config = function()
     require("lualine").setup({
-      theme = "gruvbox-material",
       options = {
+        theme="gruvbox_dark",
         component_separators = { left = "|", right = "|" },
         section_separators = { left = " ", right = " " },
       },
