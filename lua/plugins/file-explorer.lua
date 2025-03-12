@@ -35,13 +35,12 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
-      vim.keymap.set("n", "<Leader>ef", function()
-        vim.cmd [[NvimTreeToggle]]
-      end,
-      {silent = true, noremap = true}
-      )
-			require("nvim-tree").setup({})
-
+			vim.keymap.set("n", "<Leader>e", function()
+				vim.cmd([[NvimTreeToggle]])
+			end, { silent = true, noremap = true })
+			require("nvim-tree").setup({
+				view = { relativenumber = true },
+			})
 		end,
 	},
 }

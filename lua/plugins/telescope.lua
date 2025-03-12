@@ -13,7 +13,7 @@ return {
 					},
 				},
 			})
-			local nmap = require("lib").MakeLocalMapper("m", "f", { noremap = true })
+			local nmap = require("lib").MakeLocalMapper("n", "f", { noremap = true })
 			-- telescope
 			local builtin = require("telescope.builtin")
 			nmap("f", builtin.find_files)
