@@ -1,5 +1,5 @@
 vim.cmd("set termguicolors")
-vim.cmd.colorscheme("flexoki")
+vim.cmd.colorscheme("kanagawa-paper-ink")
 vim.opt.fillchars = { eob = " " }
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -26,6 +26,6 @@ if vim.g.colors_name == "gruvbox-material" then
 	vim.cmd([[hi! NeoTreeFloatBorder guifg=]] .. colors.fg1 .. [[ guibg=None]])
 end
 
-if os.getenv("THEME") == "light" then
-	vim.opt.background = "light"
-end
+-- if os.getenv("THEME") == "light" then
+-- 	vim.opt.background = "light"
+-- end

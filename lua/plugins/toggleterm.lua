@@ -3,9 +3,9 @@ return {
 	version = "*",
 	opts = {
 		open_mapping = [[<c-t>]],
-		hide_numbers = true,
+		hide_numbers = false,
 		direction = "float",
-    shell = "powershell.exe",
+    shell = "pwsh.exe",
 		float_ops = {
 			border = "curved",
 			width = 23,
