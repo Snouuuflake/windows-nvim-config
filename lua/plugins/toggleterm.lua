@@ -1,15 +1,24 @@
 return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
-	opts = {
-		open_mapping = [[<c-t>]],
-		hide_numbers = false,
-		direction = "float",
-    shell = "pwsh.exe",
-		float_ops = {
-			border = "curved",
-			width = 23,
-			height = 17,
-		},
-	},
+	config = function()
+		require("toggleterm").setup({
+			open_mapping = [[<c-t>]],
+			hide_numbers = false,
+			direction = "float",
+			shell = "pwsh.exe",
+			float_opts = {
+				border = "none",
+			},
+      highlights = {
+        Normal = {
+          link = "ToggleTermNormal"
+        },
+        NormalFloat = {
+          link = "ToggleTermNormal"
+        }
+      },
+			shade_terminals = false,
+		})
+	end,
 }
