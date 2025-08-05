@@ -3,3 +3,4 @@
 -- Add any additional options here
 --
 vim.o.breakindent = true
+vim.opt.clipboard = ""
