@@ -7,10 +7,16 @@ return {
           return LazyVim.pick(cmd, opts)()
         end,
         header = [[
-      ╱|、         
-     (˚ˎ 。7       
-     |、˜〵        
-     じしˍ,)ノ୨୧   
+┏━━━━━━━━━━━━━━━━┓            
+┃#include <stdio.┃            
+┃#include <string┃            
+┃                ┃            
+┃int main(int arg┃            
+┃  FILE *f_ptr;  ┃   ╱|、     
+┗━━━━━━━━━━━━━━━━┛  (˚ˎ。7    
+                    |、˜〵    
+                    じしˍ,)ノ 
+                              
  ]],
         -- stylua: ignore
         ---@type snacks.dashboard.Item[]
