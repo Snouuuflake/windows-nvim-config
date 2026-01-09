@@ -5,3 +5,4 @@ vim.opt.clipboard = ""
 vim.o.breakindent = true
 vim.o.background = "dark"
 vim.o.shell = "nu"
+vim.g.snacks_animate = false
