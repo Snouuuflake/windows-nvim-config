@@ -61,9 +61,25 @@ return {
     end,
   },
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
+      require("catppuccin").setup({
+        auto_integrations = true,
+      })
+    end,
+  },
+  {
+    "Verf/deepwhite.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "oldtale",
+      colorscheme = "deepwhite",
+      colorscheme = (os.getenv("theme") == "light") and "deepwhite" or "oldtale",
     },
   },
 }
