@@ -76,7 +76,7 @@ return {
     lazy = false,
     priority = 1000,
   },
-  { dir = "~/Snou-Programs/deepblack.nvim/", lazy = false },
+  -- { dir = "~/Snou-Programs/deepblack.nvim/", lazy = false },
   {
     "LazyVim/LazyVim",
     opts = {
