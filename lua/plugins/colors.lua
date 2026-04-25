@@ -64,6 +64,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
+    lazy = false,
     config = function()
       require("catppuccin").setup({
         auto_integrations = true,
@@ -75,11 +76,12 @@ return {
     lazy = false,
     priority = 1000,
   },
+  { dir = "~/Snou-Programs/deepblack.nvim/", lazy = false },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "deepwhite",
-      colorscheme = (os.getenv("theme") == "light") and "deepwhite" or "oldtale",
+      colorscheme = "catppuccin-latte",
+      -- colorscheme = (os.getenv("theme") == "light") and "deepwhite" or "oldtale",
     },
   },
 }
